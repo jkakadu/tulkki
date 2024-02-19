@@ -1,5 +1,6 @@
-package com.example;
+package com.tulkki;
 
+import com.tulkki.config.lang;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
@@ -8,12 +9,12 @@ import net.runelite.client.config.ConfigItem;
 public interface ExampleConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+		keyName = "language",
+		name = "Kieli",
+		description = "Valitse käytettävä kieli"
 	)
-	default String greeting()
+	default lang lang()
 	{
-		return "Hello";
+		return lang.FINNISH;
 	}
 }
